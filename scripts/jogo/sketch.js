@@ -55,4 +55,9 @@ function draw() {
 	personagem.gravidadePer();
 	inimigo.exibe();
 	inimigo.move();
+	
+	if (personagem.colisao(inimigo)) {
+		console.log('colidiu');
+		noLoop();
+	}
 }
