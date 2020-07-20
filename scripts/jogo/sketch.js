@@ -1,7 +1,18 @@
+let imgCenario;
+
+let cenario;
+
+function preload() {
+	imgCenario = loadImage('imagens/cenario/floresta.png');
+}
+
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
+  cenario = new Cenario(imgCenario, 2);
+
 }
 
 function draw() {
-  background(220);
+	cenario.exibe();
+	cenario.move();
 }
