@@ -30,6 +30,12 @@ function preload() {
 	somJogo = loadSound('sons/airtone_resonance.mp3');
 }
 
+function keyPressed(){
+	if (key ==='ArrowUp') {
+		personagem.pula();
+	}
+}
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   cenario = new Cenario(imgCenario, 2);
@@ -43,5 +49,7 @@ function draw() {
 	cenario.exibe();
 	cenario.move();
 	personagem.exibe();
+	personagem.gravidadePer();
 	inimigo.exibe();
+	inimigo.move();
 }
