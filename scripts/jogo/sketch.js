@@ -2,6 +2,7 @@ let imgCenario;
 let somJogo;
 let imgPersonagem;
 let imgInimigo;
+let somPulo;
 
 let cenario;
 let personagem;
@@ -28,11 +29,13 @@ function preload() {
 	imgPersonagem = loadImage('imagens/personagem/correndo.png');
 	imgInimigo = loadImage('imagens/inimigos/gotinha.png');
 	somJogo = loadSound('sons/airtone_resonance.mp3');
+	somPulo = loadSound('sons/somPulo.mp3');
 }
 
 function keyPressed(){
 	if (key ==='ArrowUp') {
 		personagem.pula();
+		somPulo.play();
 	}
 }
 
