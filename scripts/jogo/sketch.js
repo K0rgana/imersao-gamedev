@@ -4,6 +4,7 @@ let imgPersonagem;
 let imgInimigo;
 let imgInimigoGrande;
 let imgInimigoVoador;
+let imgGameOver;
 let somPulo;
 
 let cenario;
@@ -49,6 +50,7 @@ const inimigos = [];
 
 function preload() {
 	imgCenario = loadImage('imagens/cenario/floresta.png');
+	imgGameOver = loadImage('imagens/assets/game-over.png');
 	imgPersonagem = loadImage('imagens/personagem/correndo.png');
 	imgInimigo = loadImage('imagens/inimigos/gotinha.png');
 	imgInimigoGrande = loadImage('imagens/inimigos/troll.png');
@@ -98,7 +100,7 @@ function draw() {
 		inimigo.move();
 
 		if (personagem.colisao(inimigo)) {
-			console.log('colidiu');
+			image(imgGameOver, width/2 -200, height/3);
 			noLoop();
 		}
 	});
