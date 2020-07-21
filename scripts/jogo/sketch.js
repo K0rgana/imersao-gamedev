@@ -11,6 +11,7 @@ let personagem;
 let inimigo;
 let inimigoGrande;
 let inimigoVoador;
+let pontuacao;
 
 const matrizInimigo = [
 	[0, 0],    [104, 0],    [208, 0],    [312, 0],
@@ -66,6 +67,8 @@ function keyPressed(){
 function setup() {
   createCanvas(windowWidth, windowHeight);
   cenario = new Cenario(imgCenario, 2);
+  pontuacao = new Pontuacao();
+
   personagem = new Personagem(matrizPer,imgPersonagem, 30, 30, 150, 175, 220, 270);
 
   const inimigo = new Inimigo(matrizInimigo, imgInimigo, width -52, 30, 62, 62, 104, 104, 10, 300);
@@ -83,6 +86,10 @@ function setup() {
 function draw() {
 	cenario.exibe();
 	cenario.move();
+
+	pontuacao.exibe();
+	pontuacao.adicionar();
+
 	personagem.exibe();
 	personagem.gravidadePer();
 
