@@ -1,8 +1,8 @@
 class Personagem extends Animacao{
-	constructor(matriz, imagem, x, larguraPer, alturaPer, larguraSprite, alturaSprite){
-		super(matriz, imagem, x, larguraPer, alturaPer, larguraSprite, alturaSprite);
+	constructor(matriz, imagem, x, variacaoY, larguraPer, alturaPer, larguraSprite, alturaSprite){
+		super(matriz, imagem, x, variacaoY, larguraPer, alturaPer, larguraSprite, alturaSprite);
 
-		this.yBase = height - this.alturaPer;
+		this.yBase = height - this.alturaPer - variacaoY;
 		this.y = this.yBase;
 
 		this.gravidade = 3;
@@ -24,7 +24,7 @@ class Personagem extends Animacao{
 		rect(this.x, this.y,this.larguraPer, this.alturaPer);
 		rect(inimigo.x, inimigo.y, inimigo.larguraPer, inimigo.alturaPer);
 
-		const precisao = .8;
+		const precisao = .7;
 		const colidir = collideRectRect(
 			this.x, this.y, 
 			this.larguraPer * precisao,

@@ -42,8 +42,8 @@ function keyPressed(){
 function setup() {
   createCanvas(windowWidth, windowHeight);
   cenario = new Cenario(imgCenario, 2);
-  personagem = new Personagem(matrizPer,imgPersonagem, 30, 160, 185, 220, 270);
-  inimigo = new Inimigo(matrizInimigo, imgInimigo, width -52, 82, 82, 104, 104);
+  personagem = new Personagem(matrizPer,imgPersonagem, 30, 30, 160, 185, 220, 270);
+  inimigo = new Inimigo(matrizInimigo, imgInimigo, width -52, 30, 82, 82, 104, 104);
   frameRate(20);
   somJogo.loop();
 }
