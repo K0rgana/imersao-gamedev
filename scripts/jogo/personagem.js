@@ -5,11 +5,16 @@ class Personagem extends Animacao{
 		this.yBase = height - this.alturaPer - variacaoY;
 		this.y = this.yBase;
 
-		this.gravidade = 3;
+		this.gravidade = 6;
 		this.puloVel = 0;
+		this.alturaPulo = -50;
+		this.pulos = 0;
 	}
 	pula(){
-		this.puloVel = -30;
+		if (this.pulos < 3) {
+			this.puloVel = this.alturaPulo;
+			this.pulos++ ;
+		}
 	}
 	gravidadePer(){
 		this.y = this.y + this.puloVel;
@@ -17,6 +22,7 @@ class Personagem extends Animacao{
 
 		if (this.y > this.yBase) {
 			this.y = this.yBase;
+			this.pulos = 0;
 		}
 	}
 	colisao(inimigo){
