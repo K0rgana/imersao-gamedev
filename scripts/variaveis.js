@@ -1,20 +1,28 @@
 let imgCenario;
-let somJogo;
+let imgGameOver;
+let imgHeart;
+let imgTelainicial;
 let imgPersonagem;
 let imgInimigo;
 let imgInimigoGrande;
 let imgInimigoVoador;
-let imgGameOver;
+
+let fonteTelaIncial;
+
+let somJogo;
 let somPulo;
 
+let cenas;
+let cenaAtual = 'telaInicial';
+let telaInicial;
+let jogo;
+
 let cenario;
+let pontuacao;
 let personagem;
 let inimigo;
 let inimigoGrande;
 let inimigoVoador;
-let pontuacao;
-
-let inimigoAtual = 0;
 
 const matrizInimigo = [
 	[0, 0],    [104, 0],    [208, 0],    [312, 0],
