@@ -15,12 +15,13 @@ class TelaInicial{
     _texto(){
         textFont(fonteTelaIncial);
         textAlign(CENTER);
+        fill('#45323c');
 
         textSize(180);
         /* text('Ghedi', width / 2 , height / 3); */
-        text('Agnes', width / 2 , height / 3);
-        textSize(80);
-        text('e a floresta atemporal', width / 2 , height / 5 * 2);
+        text('Agnes', width / 2 , height /  7 * 2);
+        textSize(70);
+        text('e a floresta atemporal', width / 2 , height / 7 * 3);
         /* text('e o vale perdido', width / 2 , height / 5 * 2); */
     }
     _botao(){

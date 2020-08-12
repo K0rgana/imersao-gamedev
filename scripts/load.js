@@ -10,7 +10,7 @@ function preload() {
 	imgInimigoGrande = loadImage('imagens/inimigos/troll.png');
 	imgInimigoVoador = loadImage('imagens/inimigos/gotinha-voadora.png');
 	
-	fonteTelaIncial = loadFont('imagens/assets/stellaDemo.otf')
+	fonteTelaIncial = loadFont('imagens/assets/BlackAndWhitePicture-Regular.ttf')
     
 	somJogo = loadSound('sons/airtone_resonance.mp3');
 	somPulo = loadSound('sons/somPulo.mp3');
