@@ -17,6 +17,8 @@ let cenaAtual = 'telaInicial';
 let telaInicial;
 let jogo;
 
+let botaoGerenciador;
+
 let cenario;
 let pontuacao;
 let personagem;
