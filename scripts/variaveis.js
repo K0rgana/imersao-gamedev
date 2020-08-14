@@ -21,6 +21,7 @@ let botaoGerenciador;
 
 let cenario;
 let pontuacao;
+let vida;
 let personagem;
 let inimigo;
 let inimigoGrande;

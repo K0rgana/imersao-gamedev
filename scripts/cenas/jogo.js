@@ -6,6 +6,7 @@ class Jogo{
     setup(){
         cenario = new Cenario(imgCenario, 2);
         pontuacao = new Pontuacao();
+        vida = new Vida(3, 3);
         
         personagem = new Personagem(matrizPer,imgPersonagem, 30, 30, 150, 175, 220, 270);
         
@@ -32,6 +33,8 @@ class Jogo{
         pontuacao.exibe();
         pontuacao.adicionar();
 
+        vida.exibe();
+
         personagem.exibe();
         personagem.gravidadePer();
 
@@ -41,20 +44,25 @@ class Jogo{
         inimigo.exibe();
         inimigo.move();
         
-        console.log('hi lorena');
         if (inimigoVisivel) {
-        this.inimigoAtual++;
+            this.inimigoAtual++;
+            inimigo.aparece();
 
-        if (this.inimigoAtual > 2) {
-            this.inimigoAtual = 0;
-        }
+            if (this.inimigoAtual > 2) {
+                this.inimigoAtual = 0;
+            }
 
-        inimigo.velocidade = parseInt(random(10, 30));
+            inimigo.velocidade = parseInt(random(10, 30));
         }
 
         if (personagem.colisao(inimigo)) {
-        image(imgGameOver, width/2 -200, height/3);
-        noLoop();
+            vida.perdeVida();
+            personagem.tornarInvencivel();
+            
+            if (vida.vidas === 0) {
+                image(imgGameOver, width/2 -200, height/3);
+                noLoop();
+            }
         }
 
     }
