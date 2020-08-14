@@ -17,6 +17,7 @@ let cenaAtual = 'telaInicial';
 let telaInicial;
 let jogo;
 
+let fita;
 let botaoGerenciador;
 
 let cenario;
