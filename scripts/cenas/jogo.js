@@ -21,7 +21,7 @@ class Jogo{
     }
 
     keyPressed(key){
-        if (key ==='ArrowUp') {
+        if (key ==='ArrowUp' || key === ' '|| key === 'w') {
             personagem.pula();
             somPulo.play();
         }
