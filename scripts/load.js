@@ -18,4 +18,5 @@ function preload() {
 	somJogo = loadSound('sons/airtone_resonance.mp3');
 	somGameOver = loadSound('sons/somGameOver.wav');
 	somPulo = loadSound('sons/somPulo.mp3');
+	somDano = loadSound('sons/somDano.wav');
 }

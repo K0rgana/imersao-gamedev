@@ -13,6 +13,7 @@ let fonteTelaIncial;
 let somJogo;
 let somGameOver;
 let somPulo;
+let somDano;
 
 let cenas;
 let cenaAtual = 'telaInicial';

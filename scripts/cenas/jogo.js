@@ -65,6 +65,7 @@ class Jogo{
 
         if (personagem.colisao(inimigo)) {
             vida.perdeVida();
+            somDano.play();
             personagem.tornarInvencivel();
             
             if (vida.vidas === 0) {
