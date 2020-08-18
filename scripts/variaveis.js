@@ -1,5 +1,6 @@
 let imgCenario;
 let imgGameOver;
+let imgPerAngry;
 let imgHeart;
 let imgTelainicial;
 let imgPersonagem;
@@ -10,6 +11,7 @@ let imgInimigoVoador;
 let fonteTelaIncial;
 
 let somJogo;
+let somGameOver;
 let somPulo;
 
 let cenas;

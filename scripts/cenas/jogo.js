@@ -2,6 +2,8 @@ class Jogo{
     constructor(){
         this.indice = 0;
         this.mapa = fita.mapa;
+
+        this.fimDeJogo = false;
     }
     
     setup(){
@@ -21,9 +23,11 @@ class Jogo{
     }
 
     keyPressed(key){
-        if (key ==='ArrowUp' || key === ' '|| key === 'w') {
+        if (!this.fimDeJogo && (key ==='ArrowUp' || key === ' '|| key === 'w')) {
             personagem.pula();
             somPulo.play();
+        }else if (this.fimDeJogo && (key === 'Enter' || key === 'r')) {
+            window.location.reload();
         }
     }
 
@@ -64,10 +68,28 @@ class Jogo{
             personagem.tornarInvencivel();
             
             if (vida.vidas === 0) {
-                image(imgGameOver, width/2 -200, height/3);
+                gameOver(this);
                 noLoop();
             }
         }
+    
+        function gameOver(that) {
+                background('rgba(0%,0%,0%,.80)');
+                fill("#e55c5c");
 
+                image(imgGameOver, width / 2 - 412 / 2, height / 3 - 150);
+                image(imgPerAngry, width / 2 - 412 / 2, height / 3 - 72 / 2 , 350 , 350);
+                somJogo.stop()
+                somGameOver.play();
+
+                textAlign(CENTER);
+                textSize(60);
+                text(`voce marcou ${parseInt(pontuacao.pontos)} Pontos`, width / 2 , height / 2 - 120);
+
+                textSize(40);
+                text("pressione ENTER ou R para jogar novamente", width / 2, height / 2 + 220 );
+                that.fimDeJogo = true;
+
+        }
     }
 }
